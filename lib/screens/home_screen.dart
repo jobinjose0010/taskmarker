@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:TaskMarker/widgets/app_bar.dart';
+import 'package:TaskMarker/widgets/category_heading.dart';
 
 class HomeScreen extends StatelessWidget {
   var pink = 0xffF7989F;
@@ -13,44 +15,9 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: <Widget>[
             //Appbar Setup
-            Container(
-              padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 30.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  IconButton(
-                    icon: Image.asset("images/hamburger.png"),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: Image.asset("images/notification.png"),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
+            AppBars(),
             //AppBar setup Complete
-            Container(
-              padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 70.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(
-                    "CATEGORY",
-                    style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffA6A1A6),
-                        letterSpacing: 10.0),
-                  ),
-                  Icon(
-                    Icons.add,
-                    size: 35.0,
-                    color: Colors.blue,
-                  ),
-                ],
-              ),
-            ),
+            CategoryHeading(),
             Padding(
               padding: EdgeInsets.only(top: 20.0),
               child: Container(
